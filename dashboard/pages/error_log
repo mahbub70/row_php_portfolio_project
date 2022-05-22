@@ -1,0 +1,12 @@
+[25-Jan-2022 20:20:41 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:44 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:46 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:47 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:49 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:54 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:20:56 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:21:17 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:21:18 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10
+[25-Jan-2022 20:21:18 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/pages/check_username_db.php on line 10

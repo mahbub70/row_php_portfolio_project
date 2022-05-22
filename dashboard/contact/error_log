@@ -1,0 +1,1 @@
+[10-Jan-2022 13:51:39 asia/dhaka] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/includes/header.php on line 27

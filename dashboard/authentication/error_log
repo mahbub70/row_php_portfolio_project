@@ -1,0 +1,22 @@
+[08-Jan-2022 02:36:22 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:09:29 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:10:33 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:13:04 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:13:25 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:14:12 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:15:11 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:15:27 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:25:11 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:27:43 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:27:56 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:27:59 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[10-Jan-2022 13:29:10 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[25-Jan-2022 14:36:20 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[25-Jan-2022 20:20:13 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[25-Jan-2022 20:20:26 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[25-Jan-2022 20:21:21 UTC] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login_check.php on line 19
+[25-Jan-2022 20:21:21 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, bool given in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login_check.php on line 20
+[25-Jan-2022 20:21:21 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[25-Jan-2022 20:22:17 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[25-Jan-2022 20:23:20 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4
+[31-Jan-2022 08:07:50 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/computer/probizz.computerclinicbd.com/dashboard/authentication/login-2.php on line 4

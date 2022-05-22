@@ -1,0 +1,182 @@
+<?php 
+    session_start();
+
+    // Database Connection File
+    require '../includes/db.php';
+
+    // Receive Url Code That encode using base64encode() function
+    $recv_encoded_user_id = $_GET['id'];
+    $decode_encoded_user_id = base64_decode($recv_encoded_user_id);
+    $make_int_encoded_user_id = intval($decode_encoded_user_id);
+    $decript_formula = floor(((($make_int_encoded_user_id * 56789)/98765)/123465789));
+
+    // Receive Acual ID
+    $id = $decript_formula;
+
+
+    // Menu Section Start
+    if(isset($_POST['menu_submit'])){
+        // Check Method is POST or Not
+        if($_SERVER['REQUEST_METHOD'] == "POST"){
+            $menu_name = mysqli_real_escape_string($db_connect,input_sanitizer($_POST['name']));
+            $menu_link = mysqli_real_escape_string($db_connect,input_sanitizer($_POST['link']));
+        }else{
+            header("location: /403-forbidden");
+        }
+
+        // Menu Name Validation
+        if($menu_name == ""){
+            $name_err = "Please Enter Your Menu Name.";
+        }elseif(strlen($menu_name) > 30){
+            $name_err = "Menu Name Contains Maximum 30 Characters.";
+        }
+
+        // Link Validation
+        // Regex link Validation 
+        $regex_link_validation_code = "/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i";
+        $valid_link = preg_match($regex_link_validation_code,$menu_link);
+        if($menu_link != ""){
+            if(!$valid_link){
+                $link_err = "This is not valid link. Please Enter Valid Link.";
+            }
+        }
+
+
+        // Check Validation Complete OR not
+        if(!isset($name_err) && !isset($link_err)){
+
+            // Check This Menu Already Available or Not
+            $check_menu_result = mysqli_query($db_connect,"SELECT * FROM menu WHERE name='$menu_name'");
+            if(!$check_menu_result){
+                header("location: /403-forbidden");
+            }
+
+            if(mysqli_num_rows($check_menu_result) == 0){
+                $menu_update_result = mysqli_query($db_connect,"UPDATE menu SET name='$menu_name',link='$menu_link' WHERE id=$id");
+                if($menu_update_result){
+                    $_SESSION['success'] = "Update Success!";
+                    header("location: /menu-info");
+                }else{
+                    $faild = "Faild! Please Try Again.";
+                }
+            }else{
+                $faild = "Already Exist";
+            } 
+            
+        }
+    }
+
+
+    // GET ALL MENU LIST FROM DATABASE
+    $menus_result = mysqli_query($db_connect,"SELECT * FROM menu WHERE id=$id");
+    if(!$menus_result){
+        header("location: /403-forbidden");
+    }
+    $menu_info_array = mysqli_fetch_assoc($menus_result);
+    // --------------------
+    
+
+    // Function for form input sanitize
+    function input_sanitizer($data){
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    // Includes Header File
+    require '../includes/header.php';
+
+    
+?>
+
+
+<!-- Content Wrapper START -->
+<div class="main-content">
+    <div class="page-header">
+        <h2 class="header-title">Edit Menu</h2>
+        <div class="header-sub-title">
+            <nav class="breadcrumb breadcrumb-dash">
+                <a href="/admin-dashboard" class="breadcrumb-item"><i class="anticon anticon-home m-r-5"></i>Home</a>
+                <span class="breadcrumb-item active">Edit menu</span>
+            </nav>
+        </div>
+    </div>
+    <!-- Container START -->
+    <div class="container">
+        <div class="col-md-6 m-auto">
+            <div class="card" style="border:1px solid #ddd">
+                <div class="card-body">
+                    <?php 
+                        if(isset($faild)){
+                    ?>
+                        <div class="alert alert-danger">
+                            <div class="d-flex align-items-center justify-content-start">
+                                <span class="alert-icon">
+                                    <i class="anticon anticon-close-o"></i>
+                                </span>
+                                <span><?=($faild)?></span>
+                            </div>
+                        </div>
+                    <?php        
+                        }
+                    ?>
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Update Name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your new menu name" name="name" value="<?=(isset($name_err)?($menu_name):($menu_info_array['name']))?>">
+                        </div>
+                        <?php 
+                            if(isset($name_err)){
+                        ?>
+                            <div class="alert alert-warning">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <span class="alert-icon">
+                                        <i class="anticon anticon-exclamation-o"></i>
+                                    </span>
+                                    <span><?=($name_err)?></span>
+                                </div>
+                            </div>
+                        <?php        
+                            }
+                        ?>
+                        
+                        <label for="basic-url">Update Link (Optional)</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3">https://</span>
+                            </div>
+                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" name="link">
+                        </div>
+                            <?php 
+                            if(isset($link_err)){
+                            ?>
+                                <div class="alert alert-warning">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <span class="alert-icon">
+                                            <i class="anticon anticon-exclamation-o"></i>
+                                        </span>
+                                        <span><?=($link_err)?></span>
+                                    </div>
+                                </div>
+                            <?php        
+                                }
+                            ?>
+
+                        <button type="submit" name="menu_submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- Content Wrapper END -->
+
+
+
+<?php 
+    // Includes Footer File
+    require '../includes/footer.php';
+
+?>
